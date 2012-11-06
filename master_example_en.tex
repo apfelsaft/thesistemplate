@@ -1,0 +1,80 @@
+\documentclass[english]{tugthesis}
+
+%% Already loaded by class:
+% \usepackage{url}
+% \usepackage[utf8]{inputenc}
+% \usepackage[english,ngerman]{babel}
+% \usepackage{setspace}
+% \usepackage{listings}
+% \usepackage{color}
+% \usepackage{graphicx}
+% \usepackage{cite}
+% \usepackage[komastyle,headsepline,markuppercase]{scrpage2}  
+
+%% load some more packages here:
+% \usepackage{}
+
+%% load this package last
+\usepackage[%
+ bookmarks,%
+ plainpages=false,%
+ pdfpagelabels,%
+ colorlinks=false,%
+ pdfborder={0 0 0},%
+]{hyperref}
+
+\plaintitle{There and Back Again}
+\plainauthor{Bilbo Baggins}
+\mailaddress{bilbo@bag-end.me}
+\matriculationnumber{0123456}
+%\assessor{Elrond}
+\supervisor{Gandalf~the~Gray}
+%\supervisors{Gandalf~the~Gray \and Elrond}
+\institute{Institute for Applied Information\\Processing and Communications (IAIK)}
+
+\begin{document}
+  \maketitle
+	
+  \chapter*{\abstractname}
+  % <Abstract text>
+  \cleardoublepage
+	
+	\chapter*{\zusfname}
+	% <German abstract text> (optional)
+	\cleardoublepage
+  % \include{abstract_de}
+	
+	\chapter*{\ackname}
+  % <Acknowledgments text>
+	\cleardoublepage
+
+  %% this should be the last command 
+  % before the main contents of the thesis
+  % since it resets the page counter and the
+  % page enumeration style.
+  \tableofcontents
+	
+  %% ----------------------
+  %% main content of thesis
+  \include{introduction}
+  % \include{...}
+
+  %% appendix
+  \appendix
+  \include{appendix}
+	%% ----------------------
+
+  % lists (rearrange/remove them to your taste)
+  \listoffigures
+  \listoftables
+  % \lstlistoflistings
+
+  \nocite{*}
+  \bibliographystyle{alpha}
+  \bibliography{biblio}
+  
+  % statutory declaration (Eidesstattliche Erklärung)
+  % for a german thesis this is in german only, 
+  % for english, it appears in german and english
+  \statutorydeclaration
+\end{document}
